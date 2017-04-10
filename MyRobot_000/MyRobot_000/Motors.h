@@ -38,4 +38,9 @@ void motors_go_backward_and_left(void);
 void motors_go_backward_and_right(void);
 void motors_go_left(void);
 void motors_go_right(void);
+
+String motors_get_direction_string(void);
+String motors_get_speeds_string(void);
+String motors_get_realspeeds_string(void);
+String motors_get_maxspeeds_string(void);
 #endif /* MOTORS_H_ */

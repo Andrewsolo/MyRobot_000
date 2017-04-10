@@ -250,11 +250,10 @@ void Task_SerialHandler(void){
 
 //=================================================================================
 void SendInfos(void){
-	//Serial.println("Directions: " + String(motor_right.get_direction() + " " + String(motor_left.get_direction()));
-
-	//Serial.print(F(" Speeds: "));		Serial.println(String(motor_right.get_speed()) + F(" ") + String(motor_left.get_speed()));
-	//Serial.print(F(" RealSpeeds: "));	Serial.println(String(motor_right.get_realspeed()) + F(" ") + String(motor_left.get_realspeed()));
-	//Serial.print(F(" Max Speeds: "));	Serial.println(String(motor_right.get_max_speed()) + F(" ") + String(motor_left.get_max_speed()));
+	//Serial.println(motors_get_direction_string());
+	Serial.println(motors_get_speeds_string());
+	Serial.println(motors_get_realspeeds_string());
+	Serial.println(motors_get_maxspeeds_string());
 }
 
 

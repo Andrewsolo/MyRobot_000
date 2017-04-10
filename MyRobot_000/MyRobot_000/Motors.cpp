@@ -181,3 +181,31 @@ void motors_go_right(void){
 	else
 		motors_speed_down(MOTORS_STOP_STEP,MOTORS_STOP_STEP);
 }
+
+//========================================================
+String motors_get_direction_string(void){
+	String Str = F("Directions: ");
+	Str += String(motor_right.get_direction()) + F(" ") + String(motor_left.get_direction());
+	return Str;
+}
+
+//========================================================
+String motors_get_speeds_string(void){
+	String Str = F(" Speeds: ");
+	Str += String(motor_right.get_speed()) + F(" ") + String(motor_left.get_speed());
+	return Str;
+}
+	
+//========================================================
+String motors_get_realspeeds_string(void){
+	String Str = F(" RealSpeeds: ");
+	Str += String(motor_right.get_realspeed()) + F(" ") + String(motor_left.get_realspeed());
+	return Str;
+}
+	
+//========================================================
+String motors_get_maxspeeds_string(void){
+	String Str = F(" Max Speeds: ");
+	Str += String(motor_right.get_max_speed()) + F(" ") + String(motor_left.get_max_speed());
+	return Str;
+}
