@@ -99,7 +99,6 @@ void Task_BarrierDetection(void){
 		sonar_distance = SONAR_MAX_DISTANCE;
 		// Найдем минимальное значение
 		for (uint8_t i=0;i<servo_positions_cnt();i++){
-		//for (uint8_t i=0;i<4;i++){
 			if (servo_h_distances[i] < sonar_distance) sonar_distance = servo_h_distances[i];
 		}
 
