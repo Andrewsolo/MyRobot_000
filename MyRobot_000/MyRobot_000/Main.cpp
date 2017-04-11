@@ -143,5 +143,97 @@ void sonar_echoCheck(void) { // Timer2 interrupt calls this function every 24uS 
 
 
 
+<<<<<<< HEAD
+=======
+		//-------------------------------------
+		if (isRCEnabled){
+			// Bluetooth Remote Control commands
+			if (Cmd=='F'){			// Forward command
+				motors_go_forward();
+			}
+			else if (Cmd=='G'){		// Forward Left command
+				motors_go_forward_and_left();
+			}
+
+			else if (Cmd=='I'){		// Forward Right command
+				motors_go_forward_and_right();
+			}
+
+			else if (Cmd=='B'){		// Backward command
+				motors_go_backward();
+			}
+
+			else if (Cmd=='H'){		// Backward Left command
+				motors_go_backward_and_left();
+			}
+
+			else if (Cmd=='J'){		// Backward Right command
+				motors_go_backward_and_right();
+			}
+
+			else if (Cmd=='L'){		// Left command
+				motors_go_left();
+			}
+
+			else if (Cmd=='R'){		// Right command
+				motors_go_right();
+			}
+
+			//else if (Cmd=='L'){
+			//motors_correctspeed(-1);
+			//}
+			//else if (Cmd=='R'){
+			//motors_correctspeed(1);
+			//}
+
+			else if (Cmd == 'S'){
+				motors_speed_down(MOTORS_STOP_STEP,MOTORS_STOP_STEP);
+			}
+
+			//-----------------------------------------
+			else if (Cmd=='W'){		// Front lights on
+			}
+			else if (Cmd=='w'){		// Front lights off
+			}
+
+			else if (Cmd=='U'){		// Back lights on
+			}
+			else if (Cmd=='u'){		// Back lights off
+			}
+
+			else if (Cmd=='V'){		// Horn sound play
+			}
+			else if (Cmd=='v'){		// Horn sound stop
+			}
+
+
+			//---- команды изменения скорости ---------
+			else if ((Cmd>='0' && Cmd<='9') || Cmd == 'q'){		// Speed 0/4
+				uint8_t newspeed;
+				if (Cmd == 'q') newspeed = 10;
+				else newspeed = (uint8_t)(Cmd - '0');
+				motors_set_max_speed(newspeed*(MOTOR_SPEED_MAX-MOTOR_SPEED_MIN)/10 + MOTOR_SPEED_MIN, false);
+			}
+			else{
+				motors_speed_down(20,20);	// если обнаружена неизвестная команда, то останавливаемся, чтобы не продолжать движение без соответствующей команды.
+			}
+
+		}	//isRCEnabled
+
+		lastCmd = Cmd;
+		SendInfos();
+	}
+}
+
+//=================================================================================
+void SendInfos(void){
+	//Serial.println("Directions: " + String(motor_right.get_direction() + " " + String(motor_left.get_direction()));
+
+	//Serial.print(F(" Speeds: "));		Serial.println(String(motor_right.get_speed()) + F(" ") + String(motor_left.get_speed()));
+	//Serial.print(F(" RealSpeeds: "));	Serial.println(String(motor_right.get_realspeed()) + F(" ") + String(motor_left.get_realspeed()));
+	//Serial.print(F(" Max Speeds: "));	Serial.println(String(motor_right.get_max_speed()) + F(" ") + String(motor_left.get_max_speed()));
+}
+
+>>>>>>> parent of d5ea779... motors_get_*_string
 
 //=================================================================================	

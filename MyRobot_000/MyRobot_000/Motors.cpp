@@ -180,6 +180,7 @@ void motors_go_right(void){
 	}
 	else
 		motors_speed_down(MOTORS_STOP_STEP,MOTORS_STOP_STEP);
+<<<<<<< HEAD
 }
 
 //========================================================
@@ -208,4 +209,6 @@ String motors_string_maxspeeds(void){
 	String Str = F(" Max Speeds: ");
 	Str += String(motor_right.get_max_speed()) + F(" ") + String(motor_left.get_max_speed());
 	return Str;
+=======
+>>>>>>> parent of d5ea779... motors_get_*_string
 }

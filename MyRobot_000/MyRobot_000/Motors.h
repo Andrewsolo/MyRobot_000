@@ -28,6 +28,7 @@ void	motors_speed_down(uint8_t, uint8_t);
 uint8_t motors_get_speed(void);
 void	motors_set_max_speed(uint8_t, boolean);
 uint8_t get_motors_max_speed(void);
+<<<<<<< HEAD
 void	motors_correctspeed(int);
 // Команды движения
 void	motors_go_forward(void);
@@ -43,4 +44,16 @@ String	motors_string_direction(void);
 String	motors_string_speeds(void);
 String	motors_string_realspeeds(void);
 String	motors_string_maxspeeds(void);
+=======
+void motors_correctspeed(int);
+
+void motors_go_forward(void);
+void motors_go_forward_and_left(void);
+void motors_go_forward_and_right(void);
+void motors_go_backward(void);
+void motors_go_backward_and_left(void);
+void motors_go_backward_and_right(void);
+void motors_go_left(void);
+void motors_go_right(void);
+>>>>>>> parent of d5ea779... motors_get_*_string
 #endif /* MOTORS_H_ */
