@@ -13,7 +13,7 @@ boolean isRCEnabled = true;
 uint8_t lastCmd;
 
 //==============================================================
-void SerialInit(void){
+void serial_init(void){
 	
 	Serial.begin(115200);
 	Serial.println(F("Start"));	
@@ -123,14 +123,14 @@ void Task_SerialHandler(void){
 		}	//isRCEnabled
 
 		lastCmd = Cmd;
-		SendInfos();
+		serial_send_debug();
 	}
 }
 
 //=================================================================================
-void SendInfos(void){
+void serial_send_debug(void){
 	//Serial.println(motors_get_direction_string());
-	Serial.println(motors_string_speeds());
+	//Serial.println(motors_string_speeds());
 	Serial.println(motors_string_realspeeds());
 	Serial.println(motors_string_maxspeeds());
 }

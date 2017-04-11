@@ -9,9 +9,9 @@
 #ifndef SERIALHANDLER_H_
 #define SERIALHANDLER_H_
 
-void SerialInit(void);
+void serial_init(void);
 void Task_SerialHandler(void);
-void SendInfos(void);
+void serial_send_debug(void);
 
 
 

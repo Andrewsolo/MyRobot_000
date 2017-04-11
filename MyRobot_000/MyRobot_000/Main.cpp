@@ -42,7 +42,7 @@ void Task_ServoHandler(void);
 void Task_BarrierDetection(void);
 
 void sonar_echoCheck(void);
-void SendInfos(void);
+void serial_send_debug(void);
 
 
 //=====================================================================================================================================
@@ -50,7 +50,7 @@ void setup()
 {
 	//wdt_disable();
 
-	SerialInit();
+	serial_init();
 	
 
 	pinMode(LED_BUILTIN, OUTPUT);
