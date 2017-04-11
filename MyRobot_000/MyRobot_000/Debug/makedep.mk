@@ -10,6 +10,8 @@ Motors.cpp
 
 NewPing.cpp
 
+SerialTask.cpp
+
 ServoTask.cpp
 
 src\libraries\Servo\src\avr\Servo.cpp

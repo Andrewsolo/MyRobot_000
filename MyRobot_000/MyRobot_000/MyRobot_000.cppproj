@@ -275,6 +275,12 @@
     <Compile Include="NewPing.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="SerialTask.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SerialTask.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="ServoTask.cpp">
       <SubType>compile</SubType>
     </Compile>

@@ -23,24 +23,24 @@
 #define is_motors_in_right_direction(r_dir,l_dir) ((motor_right.get_direction() == r_dir) && (motor_left.get_direction() == l_dir)) || (motors_get_speed()==0)
 #define motors_set_direction(r_dir,l_dir) {motor_right.set_direction(r_dir);motor_left.set_direction(l_dir);}
 
-void motors_speed_up(uint8_t, uint8_t);
-void motors_speed_down(uint8_t, uint8_t);
+void	motors_speed_up(uint8_t, uint8_t);
+void	motors_speed_down(uint8_t, uint8_t);
 uint8_t motors_get_speed(void);
-void motors_set_max_speed(uint8_t, boolean);
+void	motors_set_max_speed(uint8_t, boolean);
 uint8_t get_motors_max_speed(void);
-void motors_correctspeed(int);
-
-void motors_go_forward(void);
-void motors_go_forward_and_left(void);
-void motors_go_forward_and_right(void);
-void motors_go_backward(void);
-void motors_go_backward_and_left(void);
-void motors_go_backward_and_right(void);
-void motors_go_left(void);
-void motors_go_right(void);
-
-String motors_get_direction_string(void);
-String motors_get_speeds_string(void);
-String motors_get_realspeeds_string(void);
-String motors_get_maxspeeds_string(void);
+void	motors_correctspeed(int);
+// Команды движения
+void	motors_go_forward(void);
+void	motors_go_forward_and_left(void);
+void	motors_go_forward_and_right(void);
+void	motors_go_backward(void);
+void	motors_go_backward_and_left(void);
+void	motors_go_backward_and_right(void);
+void	motors_go_left(void);
+void	motors_go_right(void);
+// Вывод отладочной информации
+String	motors_string_direction(void);
+String	motors_string_speeds(void);
+String	motors_string_realspeeds(void);
+String	motors_string_maxspeeds(void);
 #endif /* MOTORS_H_ */
