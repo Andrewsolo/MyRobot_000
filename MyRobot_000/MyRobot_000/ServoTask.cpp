@@ -23,7 +23,7 @@ boolean servo_isWaiting = false;
 //boolean isServoPositioned = false;
 
 // Private
-uint8_t ServoPhase = SERVO_PHASE_GETING_ANGLE;
+uint8_t ServoPhase = SERVO_PHASE_WAITING;
 uint8_t servo_h_getnextposition(void);
 
 
