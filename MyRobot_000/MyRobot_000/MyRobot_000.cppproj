@@ -287,6 +287,12 @@
     <Compile Include="ServoTask.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="SonarTask.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SonarTask.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\libraries\Servo\src\avr\Servo.cpp">
       <SubType>compile</SubType>
     </Compile>
