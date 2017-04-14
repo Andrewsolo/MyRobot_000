@@ -50,8 +50,8 @@ void setup()
 void loop()
 {
 	Task_SerialHandler();
-	Task_SonarHandler();
 	Task_ServoHandler();
+	Task_SonarHandler();
 	Task_BarrierDetection();
 }
 
