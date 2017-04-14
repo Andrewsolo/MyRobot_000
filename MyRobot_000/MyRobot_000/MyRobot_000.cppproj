@@ -246,6 +246,12 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BarrierDetectTask.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BarrierDetectTask.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Hardware\HAL.h">
       <SubType>compile</SubType>
     </Compile>
