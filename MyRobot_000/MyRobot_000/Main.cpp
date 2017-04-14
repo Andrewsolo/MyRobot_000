@@ -1,12 +1,11 @@
 ﻿#include <Arduino.h>
 
 #include "Motors.h"
-//#include "NewPing.h"
 #include "ServoTask.h"
 #include "SerialTask.h"
 #include "SonarTask.h"
 
-#include "HAL.h"	//TODO Удалить, когда все пины будут определены в своих файлах
+//#include "HAL.h"	//TODO Удалить, когда все пины будут определены в своих файлах
 
 //====== Глобальные переменные
 int sonar_distance = 0;
@@ -23,9 +22,6 @@ unsigned long barrierdetect_Timer;
 
 //====== Прототипы
 // Задачи
-//void Task_SerialHandler(void);
-//void Task_SonarHandler(void);
-//void Task_ServoHandler(void);
 void Task_BarrierDetection(void);
 
 

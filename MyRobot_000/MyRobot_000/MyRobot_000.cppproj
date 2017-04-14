@@ -138,6 +138,7 @@
           <ListValues>
             <Value>C:\AVR\MyProjects\MyRobot_000\MyRobot_000\MyRobot_000</Value>
             <Value>C:\Users\ANSO\Documents\Arduino\libraries\NewPing</Value>
+            <Value>C:\Users\soan1006\Desktop\Motor</Value>
           </ListValues>
         </avrgcccpp.linker.libraries.LibrarySearchPaths>
         <avrgcccpp.linker.miscellaneous.LinkerFlags>-Os</avrgcccpp.linker.miscellaneous.LinkerFlags>
@@ -211,8 +212,7 @@
             <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\standard</Value>
             <Value>..\include\libraries\Servo\src</Value>
             <Value>..\include\libraries\Servo\src\avr</Value>
-            <Value>..\include\libraries\Servo\src\sam</Value>
-            <Value>..\include\libraries\Servo\src\samd</Value>
+            <Value>../Hardware</Value>
           </ListValues>
         </avrgcccpp.compiler.directories.IncludePaths>
         <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
@@ -232,6 +232,7 @@
           <ListValues>
             <Value>C:\AVR\MyProjects\MyRobot_000\MyRobot_000\MyRobot_000</Value>
             <Value>C:\Users\ANSO\Documents\Arduino\libraries\NewPing</Value>
+            <Value>C:\Users\soan1006\Desktop\Motor</Value>
           </ListValues>
         </avrgcccpp.linker.libraries.LibrarySearchPaths>
         <avrgcccpp.linker.miscellaneous.LinkerFlags>-Os</avrgcccpp.linker.miscellaneous.LinkerFlags>
@@ -245,34 +246,37 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="HAL.h">
+    <Compile Include="Hardware\HAL.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="include\libraries\Servo\src\avr\ServoTimers.h">
+    <Compile Include="Hardware\Motor.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="include\libraries\Servo\src\Servo.h">
+    <Compile Include="Hardware\Motor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hardware\Motors.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hardware\Motors.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hardware\NewPing.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hardware\NewPing.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hardware\Servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hardware\Servo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hardware\ServoTimers.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Main.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Motor.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Motor.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Motors.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Motors.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="NewPing.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="NewPing.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="SerialTask.cpp">
@@ -293,9 +297,6 @@
     <Compile Include="SonarTask.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\libraries\Servo\src\avr\Servo.cpp">
-      <SubType>compile</SubType>
-    </Compile>
     <Content Include="readme.html">
     </Content>
   </ItemGroup>
@@ -307,16 +308,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="include\" />
-    <Folder Include="include\libraries\" />
-    <Folder Include="include\libraries\Servo\" />
-    <Folder Include="include\libraries\Servo\src\" />
-    <Folder Include="include\libraries\Servo\src\avr\" />
-    <Folder Include="src\" />
-    <Folder Include="src\libraries\" />
-    <Folder Include="src\libraries\Servo\" />
-    <Folder Include="src\libraries\Servo\src\" />
-    <Folder Include="src\libraries\Servo\src\avr\" />
+    <Folder Include="Hardware" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
